@@ -49,15 +49,15 @@ distance = np.random.randint(0,1,size=(n,n))
 for i in range(0, n):
     for j in range(0, i+1):
         if i == j:
-            distance[i][j] = 0
+            distance[i][j] = 10**9
         else:
             if shortest_path(graph, i, j) == None:
-                distance[i][j] = 0
+                distance[i][j] = 10**9
                 distance[j][i] = distance[i][j]
             else:
                 ls = len(list(shortest_path(graph, i, j)))
                 if ls == 0:
-                    distance[i][j] = 0
+                    distance[i][j] = 10**9
                     distance[j][i] = distance[i][j]
                 else:
                     distance[i][j] = ls - 1
