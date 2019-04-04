@@ -8,6 +8,8 @@ while True:
         break
 
 matrix = np.random.randint(0,2,size=(n,n))
+#без використання пакету NumPy:
+#matrix = [[random.randint(0,1) for j in range(n)] for i in range(n)]
 print('\n')
 for i in range(0, n):
     for j in range(0, i+1):
